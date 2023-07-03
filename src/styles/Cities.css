@@ -1,0 +1,259 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.bodyCountry {
+    width: 100vw;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Country {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 40px;
+}
+
+.infCountry {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.titleLocation {
+    position: absolute;
+}
+
+.nameCountry {
+    position: absolute;
+}
+
+.searchFilters {
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+:root {
+    --gray: #29292983;
+    --darkgray: #2c3e50;
+}
+
+select {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 30em;
+    height: 2.5em;
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #29292967;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #12c6f3;
+}
+
+input[type="search"] {
+    width: 28em;
+    height: 2.5em;
+    background-color: rgba(26, 31, 56, 0.541);
+    margin: 0px 15px;
+    border-radius: 5px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.534);
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.cardCities{
+    width: 280px;
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.imgCountry {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.overlay:hover{
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.punctuation {
+    width: 65px;
+    height: 25px;
+    background-color: transparent;
+}
+
+.punctuation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background-color: #07070777;
+    border-radius: 30px;
+}
+
+.likeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.infCountry {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 50px;
+    left: 10px;
+}
+
+.titleLocation {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nameCountry {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.nameCountry svg {
+    margin-right: 5px;
+}
+
+.up{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonUp {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 1px 10px 6px;
+    font-size: 30px;
+    background-color: rgba(80, 75, 75, 0.527);
+    color: black;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.loading,
+.zeroResults
+{
+    width: 100%;
+    height: 43vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgNoResults{
+    width: 400px;
+    height: 300px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .searchFilters{
+        flex-direction: column-reverse;
+    }
+
+    select{
+        font-size: 12px;
+    }
+
+    .select {
+        width: 20em;
+        height: 2em;
+        margin-top: 10px;
+    }
+
+    input[type="search"] {
+        width: 20em;
+        height: 2em;
+
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+}

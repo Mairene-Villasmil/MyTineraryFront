@@ -1,0 +1,344 @@
+.containerCity{
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bodyCity {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 8%;
+    color: white;
+    font-size: 8em;
+}
+
+.overlayDitails {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 0;
+}
+
+.details{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: -15px;
+}
+
+.backCities{
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 5px 8px 5px 5px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    top: 2%;
+    left: 2%;
+}
+
+.buttonDetails {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 2px 9px;
+    font-size: 30px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    right: 0%;
+    bottom: -30%;
+}
+
+.sectionInf{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.items{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.items p{
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.description{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.description p{
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.795);
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: justify;
+    position: relative;
+}
+
+.activities{
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+}
+
+.titleActivities{
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bolder;
+    margin-top: 20px;
+    position: relative;
+}
+
+.containerCArds{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.card{
+    width: 20% !important;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    border: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.imgActivities{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    top: 0;
+}
+
+.titleCard{
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+}
+
+.type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.DetailsTitle{
+    color: rgb(56, 4, 4);
+    font-weight: bolder;
+    font-size: 18px;
+    position: relative;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.detailsinf{
+    color: black;
+    font-size: 18px;
+    position: relative;
+}
+
+.day{
+    width: 100%;
+    text-align: center;
+    color: rgb(56, 4, 4);
+    font-size: 18px;
+    position: relative;
+}
+
+.buttonUp {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 0px 9px 2px 9px;
+    font-size: 30px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    right: 0%;
+    bottom: 20%;
+
+}
+
+@media screen and (max-width: 600px) {
+    .title{
+        top: 20%;
+        font-size: 2em;
+    }
+
+    .buttonDetails {
+        bottom: -80%;
+    }
+
+    .sectionInf{
+        flex-direction: column-reverse;
+        height: 40vh;
+    }
+
+    .items{
+        width: 100%;
+    }
+
+    .items p{
+        font-size: 20px;
+    }
+
+    .description{
+        align-items: center;
+        margin-top: 50px !important;
+    }
+
+    .description p{
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .titleActivities{
+        font-size: 25px;
+        height: 25px;
+    }  
+    
+    .card{
+        width: 35% !important;
+        height: 130px;
+        justify-content: space-between;
+    }
+
+    .imgActivities{
+        height: 50%;
+        top: 0%;
+    }
+
+    .titleCard{
+        font-size: 10px;
+    }
+
+    .DetailsTitle{
+        font-size: 10px;
+    }
+
+    .detailsinf{
+        font-size: 8px;
+    }
+
+    .day{
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+    .title{
+        top: 20%;
+        font-size: 5em;
+    }
+    
+    .buttonDetails {
+        bottom: -50%;
+    }
+
+    .sectionInf{
+        flex-direction: column-reverse;
+        height: 42vh;
+    }
+
+    .description{
+        align-items: center;
+    }
+
+    .description p{
+        font-size: 16px;
+    }
+
+    .items p{
+        font-size: 30px;
+    }
+
+    .titleActivities{
+        font-size: 35px;
+        height: 25px;
+    } 
+
+    .card{
+        width: 30% !important;
+        height: 210px;
+        justify-content: space-between;
+    }
+
+    .imgActivities{
+        height: 40%;
+        top: 0%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .title{
+        top: 20%;
+        font-size: 6em;
+    }
+
+    .description p{
+        font-size: 14px;
+    }
+
+    .card{
+        height: 240px;
+     }
+
+}
