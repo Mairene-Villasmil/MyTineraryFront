@@ -5,8 +5,8 @@ import { FaMapPin, FaHeart, FaStar, FaAngleUp } from 'react-icons/fa';
 import axios from 'axios';
 import { Link as LinkRouter } from 'react-router-dom';
 import Navbar from './Navbar';
-import zeroResults from '../images/_zero-results.gif'
-
+import zeroResults from '../images/zeroResults.gif'
+import loading from '../images/loading.gif'
 
 function Cities() {
   const [cities, setCities] = useState([]);
@@ -79,6 +79,7 @@ function Cities() {
       return (
         <div className='zeroResults'>
           <img src={zeroResults} className='imgNoResults' alt="No Results" />
+          <h4>Sorry, your search did not match, try again</h4>
         </div>
       );
     }
@@ -122,7 +123,7 @@ function Cities() {
         </div>
         <div>
           {cities.length > 0 ? renderCities()  // verificamos si hay ciudades cargadas en (cities), si hay se llama a la funcion renderCities, si no las hay se muestra (LOADING), tambien funciona para mostrar el mensaje de (LOADING) mientras esperamos respues de la api y se cargan als tarjetas
-          : <div className='loading'><h3>LOADING...</h3></div>}
+          : <div className='loading'><img src={loading} className='imgLoading' alt="" /></div>}
         </div> 
       </div>
       <div className='up'>
