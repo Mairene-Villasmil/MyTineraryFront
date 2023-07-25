@@ -2,18 +2,19 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .Footer {
     width: 90%;
-    height: 14vh;
+    height: 16vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     border-top: solid white 2px;
+    bottom: 0%;
 }
 
 .footer-Responsive {
@@ -50,16 +51,23 @@
 
 .navDos p {
     color: white;
-    font-size: 20px;
+    font-size: 19px;
     text-decoration-line: none;
     text-align: left;
     font-weight: bolder;
 }
 
-p {
+.contact p {
     text-decoration-line: none !important;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    color: white;
+}
+
+.politics p{
+    text-decoration-line: none !important;
+    cursor: pointer;
+    font-size: 16px;
     color: white;
 }
 
@@ -133,7 +141,73 @@ p {
     bottom: 0%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 289px) {
+    .icons li {
+        font-size: 20px;
+        justify-content: center;
+        margin: 5px;
+        padding: 6px 7px 5px 7px;
+    }
+
+    .instagram:hover {
+        font-size: 20px;
+    }
+
+    .facebook:hover {
+        font-size: 20px;
+    }
+
+    .twitter:hover {
+        font-size: 20px;
+    }
+
+    .youtube:hover {
+        font-size: 20px;
+    }
+    
+    .Footer {
+        width: 100vw;
+        height: 14vh;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .footer-Responsive {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .politics {
+        width: 40%;
+    }
+
+    .contact {
+        width: 60%;
+    }
+
+    .contact p,
+    .politics p{
+        font-size: 12px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+
+    .copy {
+        width: 100%;
+        margin-right: 10px;
+        margin-top: 70px;
+    }
+
+    .copyR{
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 290px) and (max-width: 600px) {
     .icons {
         width: 100%;
         margin: 0;
@@ -173,7 +247,7 @@ p {
 
     .Footer {
         width: 100vw;
-        height: 18vh;
+        height: 14vh;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: flex-end;
@@ -183,8 +257,8 @@ p {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .politics {
@@ -195,14 +269,17 @@ p {
         width: 50%;
     }
 
-    .contact p{
-        margin-left: 50px;
+    .contact p,
+    .politics p{
+        margin-left: 30px;
         margin-bottom: 10px;
+        line-height: 20px;
     }
 
     .copy {
         width: 100%;
         margin-right: 10px;
+        margin-top: 60px;
     }
 
     .copyR{

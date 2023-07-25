@@ -1,5 +1,4 @@
-.containerCity{
-    position: relative;
+.containerCity {
     width: 100vw;
     max-width: 100vw;
     height: 100%;
@@ -10,41 +9,37 @@
 .bodyCity {
     width: 100vw;
     height: 100vh;
-    position: absolute;
     top: 0;
 }
 
 .title {
     width: 100%;
+    height: 20vh;
     text-align: center;
-    position: relative;
-    top: 8%;
+    top: 15% !important;
     color: white;
     font-size: 8em;
 }
 
 .overlayDitails {
-    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.623);
+    background-color: #0000009f;
     border-radius: 0;
 }
 
-.details{
-    position: relative;
+.details {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     margin-left: -15px;
 }
 
-.backCities{
-    position: relative;
+.backCities {
     border: 2px solid black;
     border-radius: 100px;
     padding: 5px 8px 5px 5px;
@@ -52,12 +47,10 @@
     background-color: white;
     color: black;
     cursor: pointer;
-    top: 2%;
-    left: 2%;
+    margin: 20px;
 }
 
 .buttonDetails {
-    position: relative;
     border: 2px solid black;
     border-radius: 100px;
     padding: 2px 9px;
@@ -69,141 +62,75 @@
     bottom: -30%;
 }
 
-.sectionInf{
+.sectionInf {
     width: 100vw;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     flex-direction: row;
-    position: relative;
 }
 
-.items{
+.items {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
 }
 
-.items p{
+.items p {
     font-size: 30px;
     margin-left: 50px;
     margin-top: 15px;
-    position: relative;
+    color: white;
 }
 
-.description{
+.description {
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    margin-top: 20px;
 }
 
-.description p{
+.description p {
     width: 90%;
     height: 90%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.795);
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 16px;
     text-align: justify;
-    position: relative;
+    color: white;
 }
 
-.activities{
+.activities {
     width: 100vw;
-    height: 40vh;
-    position: relative;
+    height: 42vh;
 }
 
-.titleActivities{
+.titleActivities {
     width: 100%;
     text-align: center;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bolder;
     margin-top: 20px;
-    position: relative;
+    color: white;
+    height: 50px;
 }
 
-.containerCArds{
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: relative;
+.swiper {
+    width: 80%;
+    height: 110%;
 }
 
-.card{
-    width: 20% !important;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 15px;
-    border: transparent;
-    position: relative;
-    display: flex;
+.swiper-slide {
+    display: flex !important;
     justify-content: center;
-}
-
-.imgActivities{
-    width: 100%;
-    height: 60%;
-    position: relative;
-    top: 0;
-}
-
-.titleCard{
-    width: 100%;
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    font-weight: bolder;
-    position: relative;
-}
-
-.type{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 10px;
-    position: relative;
-}
-
-.DetailsTitle{
-    color: rgb(56, 4, 4);
-    font-weight: bolder;
-    font-size: 18px;
-    position: relative;
-}
-
-.time{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 10px;
-    position: relative;
-}
-
-.detailsinf{
-    color: black;
-    font-size: 18px;
-    position: relative;
-}
-
-.day{
-    width: 100%;
-    text-align: center;
-    color: rgb(56, 4, 4);
-    font-size: 18px;
-    position: relative;
+    align-items: center;
 }
 
 .buttonUp {
-    position: relative;
     border: 2px solid black;
     border-radius: 100px;
     padding: 0px 9px 2px 9px;
@@ -212,133 +139,177 @@
     color: black;
     cursor: pointer;
     right: 0%;
-    bottom: 20%;
+    bottom: 0%;
 
 }
 
-@media screen and (max-width: 600px) {
-    .title{
+.zeroResult{
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.animationR {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .animationR::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background-color: #37023de1;
+    animation: underline-glow 2s linear infinite;
+  }
+  
+  @keyframes underline-glow {
+    0% {
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(0);
+    }
+  }
+
+@media screen and (max-width: 290px){
+    .title {
+        top: 15%;
+        font-size: 3em;
+        height: 0vh;
+        margin-top: 150px;
+    }
+
+    .sectionInf {
+        flex-direction: column-reverse;
+        height: 40vh;
+    }
+
+    .items {
+        width: 100%;
+    }
+
+    .items p {
+        font-size: 12px;
+    }
+
+    .description {
+        align-items: center;
+    }
+
+    .description p {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .titleActivities {
+        font-size: 25px;
+        height: 0px;
+    }
+
+    .activities{
+        height: 44vh;
+    }
+
+    .animationR{
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 291px) and (max-width: 600px) {
+    .title {
         top: 20%;
-        font-size: 2em;
+        font-size: 3em;
+        height: 0vh;
+        margin-top: 200px;
     }
 
     .buttonDetails {
         bottom: -80%;
     }
 
-    .sectionInf{
+    .sectionInf {
         flex-direction: column-reverse;
         height: 40vh;
     }
 
-    .items{
+    .items {
         width: 100%;
     }
 
-    .items p{
+    .items p {
         font-size: 20px;
     }
 
-    .description{
+    .description {
         align-items: center;
         margin-top: 50px !important;
     }
 
-    .description p{
+    .description p {
         font-size: 11px;
         line-height: 15px;
     }
 
-    .titleActivities{
+    .titleActivities {
         font-size: 25px;
-        height: 25px;
-    }  
-    
-    .card{
-        width: 35% !important;
-        height: 130px;
-        justify-content: space-between;
+        height: 0px;
     }
 
-    .imgActivities{
-        height: 50%;
-        top: 0%;
+    .activities{
+        height: 44vh;
     }
 
-    .titleCard{
-        font-size: 10px;
-    }
-
-    .DetailsTitle{
-        font-size: 10px;
-    }
-
-    .detailsinf{
-        font-size: 8px;
-    }
-
-    .day{
-        font-size: 10px;
+    .animationR{
+        text-align: center;
     }
 
 }
 
-@media screen and (min-width: 601px) and (max-width: 1023px) {
-    .title{
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .title {
         top: 20%;
         font-size: 5em;
     }
-    
+
     .buttonDetails {
         bottom: -50%;
     }
 
-    .sectionInf{
+    .sectionInf {
         flex-direction: column-reverse;
-        height: 42vh;
+        height: 47vh;
     }
 
-    .description{
+    .description {
         align-items: center;
     }
 
-    .description p{
+    .description p {
         font-size: 16px;
     }
 
-    .items p{
-        font-size: 30px;
+    .items p {
+        font-size: 25px;
     }
 
-    .titleActivities{
-        font-size: 35px;
-        height: 25px;
-    } 
-
-    .card{
-        width: 30% !important;
-        height: 210px;
-        justify-content: space-between;
+    .activities{
+        height: 36vh;
     }
 
-    .imgActivities{
-        height: 40%;
-        top: 0%;
+    .titleActivities {
+        font-size: 25px;
+        height: 30px;
+        margin-top: 0;
     }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    .title{
-        top: 20%;
-        font-size: 6em;
-    }
-
-    .description p{
-        font-size: 14px;
-    }
-
-    .card{
-        height: 240px;
-     }
 
 }

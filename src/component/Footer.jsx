@@ -19,13 +19,6 @@ function Footer() {
 
   return (
     <section className='footer'>
-      <section className='navDos'>
-        {NavLinks.map((Link, index) => (
-          <LinkRouter to={Link.path} key={index}>
-            <p className="link">{Link.name}</p>
-          </LinkRouter>
-        ))}
-      </section>
       <section className='Footer'>
         <section className='footer-Responsive'>
           <section className='contact'>

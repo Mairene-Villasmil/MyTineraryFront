@@ -1,29 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/CityDetails.css';
-import bodyCity from '../images/hero.jpeg';
 import { FaAngleDown, FaAngleLeft, FaGlobe, FaDollarSign, FaUsers, FaAngleUp } from "react-icons/fa";
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 import { Link as LinkRouter } from 'react-router-dom'
+import CardItinerary from './CardItinerary'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
 function CityDetails() {
-
     const [isExpanded, setIsExpanded] = useState(false);
-    const [city, setCity] = useState([])
+    const [city, setCity] = useState([]);
+    const [itineraries, setItineraries] = useState([]);
 
-    const { id } = useParams()
+    const { id } = useParams();
 
     async function getCity(id) {
-        let cityDB
-        cityDB = await axios.get("http://localhost:5000/api/cities/" + id);
-
+        const cityDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities/" + id);
         setCity(cityDB.data.response);
     }
 
+    async function getItineraries(idCity) {
+        const itinerariesDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/cities/" + idCity);
+        setItineraries(itinerariesDB.data.response);
+    }
     useEffect(() => {
-        getCity(id)
-    }, [])
-
+        getCity(id);
+        getItineraries(id);
+    }, [id]);
 
     const handleToggle = () => {
         setIsExpanded(!isExpanded);
@@ -45,7 +52,7 @@ function CityDetails() {
                         <div className="overlayDitails">
                             <LinkRouter to='/Cities'>
                                 <span className='backCities' onClick={handleToggle}>
-                                    <FaAngleLeft fontSize='30px'/> Back to cities
+                                    <FaAngleLeft fontSize='30px' /> Back to cities
                                 </span>
                             </LinkRouter>
                             <p className='title'>{city[0].name}</p>
@@ -59,7 +66,6 @@ function CityDetails() {
                             <div className="Details overlayDitails">
                                 <section className='sectionInf'>
                                     <div className='items'>
-                                        {/* <p><FaCloudSun /> {city[0].weather}</p> */}
                                         <p><FaGlobe /> {city[0].language}</p>
                                         <p><FaDollarSign /> {city[0].currency}</p>
                                         <p><FaUsers /> {city[0].population}</p>
@@ -72,64 +78,33 @@ function CityDetails() {
                                     <div>
                                         <p className='titleActivities'>Itineraries</p>
                                     </div>
-                                    <div className='containerCArds'>
-                                        <div className='card'>
-                                            <img src={bodyCity} className='imgActivities' alt="" />
-                                            <p className='titleCard'>TITLE</p>
-                                            <span className='type'>
-                                                <p className='DetailsTitle'>Type Activity:</p>
-                                                <p className='detailsinf'>$0000</p>
-                                            </span>
-                                            <span className='time'>
-                                                <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'> hours</p>
-                                            </span>
-                                            <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='card'>
-                                            <img src={bodyCity} className='imgActivities' alt="" />
-                                            <p className='titleCard'>TITLE</p>
-                                            <span className='type'>
-                                                <p className='DetailsTitle'>Type Activity:</p>
-                                                <p className='detailsinf'>$0000</p>
-                                            </span>
-                                            <span className='time'>
-                                                <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'> hours</p>
-                                            </span>
-                                            <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='card'>
-                                            <img src={bodyCity} className='imgActivities' alt="" />
-                                            <p className='titleCard'>TITLE</p>
-                                            <span className='type'>
-                                                <p className='DetailsTitle'>Type Activity:</p>
-                                                <p className='detailsinf'>$0000</p>
-                                            </span>
-                                            <span className='time'>
-                                                <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'> hours</p>
-                                            </span>
-                                            <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='card'>
-                                            <img src={bodyCity} className='imgActivities' alt="" />
-                                            <p className='titleCard'>TITLE</p>
-                                            <span className='type'>
-                                                <p className='DetailsTitle'>Type Activity:</p>
-                                                <p className='detailsinf'>$0000</p>
-                                            </span>
-                                            <span className='time'>
-                                                <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'> hours</p>
-                                            </span>
-                                            <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='up'>
-                                            <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
-                                        </div>
+                                    {
+                                        itineraries.length > 0 ?
+                                            <Swiper
+                                                cssMode={true}
+                                                navigation={true}
+                                                pagination={true}
+                                                mousewheel={true}
+                                                keyboard={true}
+                                                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                                                className="mySwiper"
+                                            >
+                                                {itineraries.map((itinerary) => (
+
+                                                    <SwiperSlide key={itinerary._id}>
+                                                        <CardItinerary itinerary={itinerary} />
+                                                    </SwiperSlide>
+                                                ))}
+                                            </Swiper>
+                                            : <div className='zeroResult'>
+                                                <h3 className='animationR'>Very soon you will find the itineraries available for this city</h3>
+                                            </div>
+                                    }
+                                    <div className='up'>
+                                        <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
                                     </div>
                                 </section>
+
                             </div>
                         )}
                     </div >

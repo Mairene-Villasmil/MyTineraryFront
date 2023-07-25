@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/Cities.css';
 import Footer from './Footer';
-import { FaMapPin, FaHeart, FaStar, FaAngleUp } from 'react-icons/fa';
+import { FaMapPin, FaStar, FaAngleUp } from 'react-icons/fa';
 import axios from 'axios';
 import { Link as LinkRouter } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -13,8 +13,9 @@ function Cities() {
   const [filter, setFilter] = useState({ country: '', search: '' }); // vamos a usar filter para filtrar nuestras ciudades en las 2 busquedas, country en el select y search en el input
 
   async function getData() {
-    const citiesDB = await axios.get("http://localhost:5000/api/cities");
+    const citiesDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities");
     setCities(citiesDB.data.response.cities);
+    console.log(citiesDB.data.response.cities[1].image)
   }
 
   useEffect(() => {
@@ -64,7 +65,6 @@ function Cities() {
               >
                 <div className="overlay">
                   <div className='punctuation'><FaStar color='#ffff29' /> 4.8</div>
-                  <div className="likeButton"><FaHeart /></div>
                   <div className="infCountry">
                     <p className="titleLocation">{city.name}</p>
                     <p className="nameCountry"><FaMapPin /> {city.country}</p>
@@ -86,7 +86,7 @@ function Cities() {
   }
 
   return (
-    <>
+    <div className='bodyCities'>
       <Navbar />
       <div className='bodyCountry'>
         <div className="searchFilters">
@@ -97,11 +97,8 @@ function Cities() {
               value={filter.country} //se le da el value de filter.country en onChange para que filtre segun el pais seleccionado segun indique el value
               onChange={(e) => setFilter({ ...filter, country: e.target.value })}>
               <option value="">Choose the country you want to visit</option>
-              <option value="Argentina">Argentina</option>
               <option value="Australia">Australia</option>
-              <option value="Brazil">Brazil</option>
               <option value="China">China</option>
-              <option value="Colombia">Colombia</option>
               <option value="France">France</option>
               <option value="Germany">Germany</option>
               <option value="Italy">Italy</option>
@@ -109,7 +106,6 @@ function Cities() {
               <option value="Spain">Spain</option>
               <option value="United Kingdom">United Kingdom</option>
               <option value="United States">United States</option>
-              <option value="Venezuela">Venezuela</option>
             </select>
           </div>
           <div>
@@ -130,7 +126,7 @@ function Cities() {
         <a href="#UP" className='buttonUp'><FaAngleUp /></a>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

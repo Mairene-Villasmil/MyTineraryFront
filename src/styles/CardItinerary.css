@@ -1,0 +1,49 @@
+.itemsCard {
+    display: flex;
+    padding: 5px 10px 0px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.itemsCard p {
+    color: black;
+    text-align: center;
+}
+
+.buttonItinerary {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: inherit !important;
+}
+
+.overlayCard {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #000000b9;
+    border-radius: 0;
+}
+
+@media screen and (max-width: 290px){
+    .overlayCard {
+        width: 270px;
+        height: 330px;
+    }
+}
+
+@media screen and (min-width: 291px) and (max-width: 760px) {
+
+    .overlayCard {
+        width: 300px;
+        height: 330px;
+    }
+}
