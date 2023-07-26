@@ -9,7 +9,7 @@
                 <li>Mairene Villasmil</li>
                 <li>Luciano Rivas</li>
             </ul>
-            <p>Find us here: [https://mytinerary-mv.web.app/](https://mytinerary-mv.web.app/)</p>
+            <p>Find us here: [https://mytinerary-mv.web.app/]</p>
             <p>All rights reserved</p>
         </div>
     </div>
