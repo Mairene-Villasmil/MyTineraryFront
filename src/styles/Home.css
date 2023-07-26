@@ -108,7 +108,7 @@ body {
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 
-.flag{
+.flag {
     width: 35px;
     margin: 0px 10px 10px 10px;
 }
@@ -173,7 +173,7 @@ body {
     top: 12%;
 }
 
-.CallTo h4{
+.CallTo h4 {
     color: white;
 }
 
@@ -186,11 +186,8 @@ body {
     font-weight: bolder;
     background-color: #500892;
     text-align: center;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-right: 60px;
     color: white;
+    margin: 10px;
 }
 
 .animationI {
@@ -213,9 +210,9 @@ body {
 
 @media screen and (max-width: 289px) {
     .bodyHome {
-        height: 130vh;
+        height: 70vh;
     }
-    
+
     .CallTo {
         flex-direction: column;
         justify-content: center;
@@ -224,9 +221,9 @@ body {
     }
 
     .container {
-        top: 50%;
+        top: 20%;
         margin-top: 260px;
-        height: 75%;
+        height: 45%;
     }
 
     .item {
@@ -256,30 +253,30 @@ body {
 
 @media screen and (min-width: 290px) and (max-width: 600px) {
     .bodyHome {
-        height: 130vh;
+        height: 60vh;
     }
 
     .container {
-        top: 50%;
+        top: 20%;
         margin-top: 260px;
-        height: 85%;
+        height: 45%;
     }
 
     .CallTo {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        top: 20%;
+        top: 15%;
     }
 
     .item .name {
         font-size: 30px;
-        margin-bottom: 330px;
+        margin-bottom: 150px;
     }
 
     .item .des {
         font-size: 25px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .item:nth-child(4),
@@ -287,34 +284,52 @@ body {
         opacity: 0;
     }
 
-    .item{
-        height: 250px;
+    .item {
+        width: 130px;
+        height: 150px;
+    }
+
+
+    .item .content {
+        justify-content: space-around;
+        height: 100%;
+        left: 10px;
+    }
+
+    .buttons{
+        bottom: 5px;
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 980px) {
+@media screen and (min-width: 601px) and (max-width:1200px) {
+    .bodyHome {
+        height: 60vh;
+    }
+
     .container {
         top: 20%;
         margin-top: 330px;
+        height: 45vh;
+    }
+
+    .item{
+        width: 200px;
+        height: 250px;
+    }
+
+    .item .name {
+        font-size: 40px;
+        margin-bottom: 150px;
     }
 
     .item:nth-child(5) {
         opacity: 0;
     }
 
-    .CallTo{
+    .CallTo {
         top: 13%;
-    }
-}
-
-@media screen and (min-width: 981px) and (max-width: 1281px) {
-    .bodyHome {
-        height: 75vh;
-    }
-
-    .container {
-        top: 20%;
-        margin-top: 240px;
-        height: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

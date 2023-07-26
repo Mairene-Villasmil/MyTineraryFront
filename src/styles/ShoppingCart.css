@@ -1,39 +1,56 @@
-.shoppingCart{
-    width: 100vw;
-    height: 65vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.shoppingCart {
+  width: 100vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.shoppingCart p{
-    font-size: 40px;
-    color: #3a0868;
+.shoppingCart p {
+  font-size: 40px;
+  color: #3a0868;
 }
 
 .animationC::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    height: 4px;
-    background-color: #ffe600e1;
-    animation: underline-glow 2s linear infinite;
-  }
-  
-  @keyframes underline-glow {
-    0% {
-      transform: scaleX(0);
-    }
-    50% {
-      transform: scaleX(1);
-    }
-    100% {
-      transform: scaleX(0);
-    }
+  content: "";
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  bottom: 70%;
+  background-color: #ffe600e1;
+  animation: underline-glow 2s linear infinite;
+}
+
+@keyframes underline-glow {
+  0% {
+    transform: scaleX(0);
   }
 
-.imgUC{
-    width: 500px;
+  50% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.imgUC {
+  width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  .imgUC {
+    width: 300px;
+  }
+
+  .shoppingCart p {
+    font-size: .9em;
+  }
+
+  .animationC::after {
+    bottom: 60%;
+  }
 }

@@ -1,4 +1,4 @@
-.bodyItinerary{
+.bodyItinerary {
     background: linear-gradient(blueviolet, rgba(137, 43, 226, 0.349), blueviolet);
 }
 
@@ -83,11 +83,11 @@ h5 {
     font-weight: bold;
 }
 
-.about h3{
+.about h3 {
     text-align: left;
 }
 
-.about span{
+.about span {
     text-align: justify;
 }
 
@@ -118,7 +118,7 @@ h5 {
     color: black;
 }
 
-.imgI{
+.imgI {
     width: 300px;
 }
 
@@ -126,6 +126,13 @@ h5 {
 .cancellation {
     color: black;
     line-height: 40px;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    border: 0;
 }
 
 .trolley {
@@ -141,7 +148,7 @@ h5 {
 }
 
 .react-datepicker__input-container {
-    width: 80% !important;
+    width: 90% !important;
 }
 
 .calendar {
@@ -150,16 +157,29 @@ h5 {
 }
 
 .date-button {
+    width: 75%;
     margin-top: 20px;
 }
 
-.loadingI{
+.loadingI {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100vw;
     height: 76vh;
+}
+
+@media screen and (max-width: 289px) {
+    .date-button {
+        width: 104%;
+        margin-top: 20px;
+    }
+
+    .calendar {
+        width: 100% !important;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -196,15 +216,15 @@ h5 {
     }
 
     .calendar {
-        width: 78%;
+        width: 90% !important;
         height: auto;
     }
 
-    .imgI{
+    .imgI {
         width: 200px;
     }
 
-    .about span{
+    .about span {
         text-align: justify;
     }
 
