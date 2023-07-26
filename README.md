@@ -1,3 +1,4 @@
+<div>
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
         <div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; text-align: center;">
             <h1>My Itinerary</h1>
